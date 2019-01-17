@@ -9,8 +9,6 @@ var meteorArr = [
 
 window.onload = () => {
   console.log('要下流星雨了')
-  alert(height)
-  alert(width)
 
   let canvas = document.querySelector('#canvas')
   let context = canvas.getContext('2d')
@@ -50,7 +48,7 @@ function draw() {
   })
 
   // 控制流星数量
-  if (meteorArr.length > 20) {
+  if (meteorArr.length > 10) {
 
   } else {
     let random = Math.random()
