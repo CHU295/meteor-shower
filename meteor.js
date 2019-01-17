@@ -37,7 +37,7 @@ function draw() {
     ctx.fill();
 
     // 渲染完一颗星星，然后处理数据，计算下一帧的位置
-    // 如果超出边界，删除这课星星，然后函数生成另一颗
+    // 如果超出边界，删除这课星星
     if (meteorArr[index].x > width + 100 || meteorArr[index].y > height + meteorArr[index].length * 2) {
       meteorArr.splice(index, 1)
     } else {
@@ -71,8 +71,8 @@ function createStart() {
   let obj = {
     x: random * width - 700,
     y: random * -200,
-    length: random * 200 + 200,
-    r: random * 5,
+    length: random * 50 + 200,
+    r: random * 3,
     vx: vx,
     vy: vx * 5,
     color: 'rgba(255,255,255,0.7)'
