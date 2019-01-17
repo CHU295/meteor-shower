@@ -4,7 +4,7 @@ let width = window.innerWidth
 
 var ctx
 var meteorArr = [
-  { x: 300, y: -300, length: 200, r: 3, vx: 5, vy: 25, color: '#fff' },
+  { x: width / 6, y: -height / 10, length: height / 5, r: 3, vx: 5, vy: 25, color: '#fff' },
 ]
 
 window.onload = () => {
@@ -48,14 +48,14 @@ function draw() {
   })
 
   // 控制流星数量
-  if (meteorArr.length > 5) {
+  if (meteorArr.length > 20) {
 
   } else {
     let random = Math.random()
     if (random > 0.5) {
       meteorArr.push(createStart())
     } else {
-      
+
     }
   }
 
@@ -69,7 +69,7 @@ function createStart() {
   let random = Math.random()
   let vx = random * 1 + 1
   let obj = {
-    x: random * width - 700,
+    x: random * width - height / 3,
     y: random * -200,
     length: random * 50 + 200,
     r: random * 3,
