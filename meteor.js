@@ -9,6 +9,8 @@ var meteorArr = [
 
 window.onload = () => {
   console.log('要下流星雨了')
+  alert(height)
+  alert(width)
 
   let canvas = document.querySelector('#canvas')
   let context = canvas.getContext('2d')
