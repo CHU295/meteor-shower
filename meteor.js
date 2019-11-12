@@ -4,7 +4,7 @@ let width = window.innerWidth
 
 var ctx
 var meteorArr = [
-  { x: width / 6, y: -height / 10, length: height / 5, r: 3, vx: 5, vy: 25, color: '#fff' },
+  { x: width / 6, y: -height / 10, length: height / 5, r: 3, vx: 5, vy: 35, color: '#fff' },
 ]
 
 window.onload = () => {
@@ -48,7 +48,7 @@ function draw() {
   })
 
   // 控制流星数量
-  if (meteorArr.length > 10) {
+  if (meteorArr.length > 100) {
 
   } else {
     let random = Math.random()
@@ -62,19 +62,20 @@ function draw() {
   ctx.restore(); // 恢复状态
 
   window.requestAnimationFrame(draw)
-}
+} 
 
 // 创建星星
 function createStart() {
   let random = Math.random()
+  let random2 = Math.random()
   let vx = random * 1 + 1
   let obj = {
-    x: random * width - height / 3,
+    x: random * width - height / 4,
     y: random * -200,
-    length: random * 50 + 200,
-    r: random * 3,
+    length: random2 * 50 + 200,
+    r: random2 * 6,
     vx: vx,
-    vy: vx * 5,
+    vy: vx * 7,
     color: 'rgba(255,255,255,0.7)'
   }
   return obj
